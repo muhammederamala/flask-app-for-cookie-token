@@ -56,7 +56,7 @@ def success():
 def logout():
     # Clear the 'name' cookie
     resp = make_response(render_template('login.html'))
-    resp.set_cookie('name', '', expires=0)
+    resp.set_cookie('logged_in_users', '', expires=0)
 
     return resp
 
